@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+</head>
+
+<body id="homepage">
+	<h1>Salut les gens</h1>
+	<form>
+		<label>Task</label>
+		<input type="text" name="task" id="newTask">
+		<input onclick="getTask()" type="submit">
+	</form>
+	<div id="taskBoard"></div>
+	<script>
+		function getTask() {
+			var DaTask = document.getElementById("newTask").value;
+			var taskBoard = document.getElementById("taskBoard");
+			var taskNew = document.createElement('div');
+			taskNew.id = "addTask";
+			taskNew.innerHTML = DaTask;
+			taskBoard.appendChild(taskNew);
+			event.preventDefault();
+			for(i = 0; i < localStorage.length; i++){
+				localStorage.setItem(i, taskNew);
+			}
+		}
+
+		function restoreSession() {
+			for (i = 0; i < localStorage.length; i++) {
+				localStorage.getItem(i, taskNew);
+				
+			}
+		}
+	</script>
+</body>
+</html>
