@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Title of the document</title>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  	<script> 	
+  		$(document).ready(function () {
+  			var valeurCourante = 0;
+  			var alreadyPressed = false;
+  			console.log("Coucouc c'est moi je fonctionne");
+  			$(".num-button").click(function () {
+  				if (alreadyPressed)
+	  				var valeurCourante = $(this).html();
+	  				console.log(valeurCourante);
+	  				$(this).html + 
+  			});
+
+  			$(".function-button").click(function () {
+  				console.log("cliqué sur une fonction");
+  			});
+  			$(".clear-button").click(function () { 
+  				console.log("cliqué sur un del"); 
+  			})
+  			$(".equals-button").click(function () { 
+  				console.log("cliqué sur un égal"); 
+  			})
+  		});
+  	</script>
+</head>
+
+<body>
+	<div id="calculator"> 
+	  
+	    <input type="text" id="display" /> 
+	          
+	    <a class="num-button seven" href="#">7</a> 
+	    <a class="num-button eight" href="#">8</a> 
+	    <a class="num-button nine" href="#">9</a> 
+	      
+	    <a class="num-button four" href="#">4</a> 
+	    <a class="num-button five" href="#">5</a> 
+	    <a class="num-button six" href="#">6</a> 
+	      
+	    <a class="num-button one" href="#">1</a> 
+	    <a class="num-button two" href="#">2</a> 
+	    <a class="num-button three" href="#">3</a> 
+	      
+	    <a class="num-button zero" href="#">0</a> 
+	    <a class="num-button dot" href="#">.</a> 
+	    <a class="clear-button clear" href="#">C</a> 
+	      
+	    <a class="function-button add" href="#"> </a> 
+	    <a class="function-button subtract" href="#">&ndash;</a> 
+	    <a class="function-button multiply" href="#">x</a> 
+	    <a class="function-button divide" href="#">/</a> 
+	      
+	    <a class="equals-button" href="#">=</a> 
+	          
+	</div>
+</body>	
+</html>
