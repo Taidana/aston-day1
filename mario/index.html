@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<title>Title of the document</title>
+</head>
+<body>
+	<script
+		src="https://code.jquery.com/jquery-3.2.1.js"
+		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+	</script>
+  	<div id="background" src="img/fond.jpg">
+  		<div id="mario" src="img/mariocopie/mariocopie-0.png"></div>
+  		<div id="enemy"></div>
+  	</div>
+<script type="text/javascript">
+  	$( function() {
+    	var leftMove = function controllerLeft() {
+    		$("#mario").css("transform: translate", "-50px");
+    	}
+
+    	var rightMove = function controllerRight() {
+    		$("#mario").css("transform: translate", "50px");
+    	}
+    	
+    	var hopHop = function controllerJump() {
+    		$("#mario").css("transform: translate","0px","60px");
+    	}
+    		$(document.body).on( "keydown", function( event ) {
+  			console.log(event.which);
+  });
+  })
+</script>
+</body>	
+</html>
