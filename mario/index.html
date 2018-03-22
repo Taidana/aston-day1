@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<title>Title of the document</title>
-</head>
-<body>
-	<script
-		src="https://code.jquery.com/jquery-3.2.1.js"
-		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-		crossorigin="anonymous">
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
-	</script>
-  	<div id="background" src="img/fond.jpg">
-  		<div id="mario" src="img/mariocopie/mariocopie-0.png"></div>
-  		<div id="enemy"></div>
-  	</div>
-<script type="text/javascript">
-  	$( function() {
-    	var leftMove = function controllerLeft() {
-    		$("#mario").css("transform: translate", "-50px");
-    	}
+	<meta charset="utf-8">
+	<title>Mario</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        body{
+        background:url('img/fond.jpg') no-repeat;
+        background-size: 1520px 722px;
+        }
 
-    	var rightMove = function controllerRight() {
-    		$("#mario").css("transform: translate", "50px");
-    	}
-    	
-    	var hopHop = function controllerJump() {
-    		$("#mario").css("transform: translate","0px","60px");
-    	}
-    		$(document.body).on( "keydown", function( event ) {
-  			console.log(event.which);
-  });
-  })
-</script>
-</body>	
+        .perso1{top:335px; left:230px; width:250px; height:350px;}
+        .perso2{top:335px; left:800px; width:250px; height:350px;}
+
+    </style>
+</head>
+<body id="homepage">
+	<div class="battle-wrap">
+    <div class="battle-kingdom">
+    <img class="mario" src="img/marios.png"/>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/fichier1.js"></script>
+</body>
 </html>
